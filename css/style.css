@@ -78,27 +78,17 @@ html, body {
 }
 
 .brand-avatar {
-  width: 38px;
-  height: 38px;
-  border-radius: 50%;
-  border: 2px solid var(--accent-cyan);
-  background: #0f172a;
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  background: linear-gradient(135deg, var(--primary-indigo) 0%, var(--accent-cyan) 100%);
   display: flex;
   align-items: center;
   justify-content: center;
   font-weight: 800;
-  font-size: 14px;
+  font-size: 15px;
   color: #ffffff;
-  overflow: hidden;
-  box-shadow: 0 0 14px rgba(56, 189, 248, 0.4);
-  flex-shrink: 0;
-}
-
-.brand-avatar img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
+  box-shadow: 0 0 14px rgba(99, 102, 241, 0.4);
 }
 
 .brand-name {

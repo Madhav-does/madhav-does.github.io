@@ -269,16 +269,13 @@ class PortfolioApp {
     container.innerHTML = `
       <!-- Hero Card -->
       <div class="glass-card p-6 md:p-8 mb-6 border-l-4 border-indigo-500">
-        <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-5">
-          <div class="flex items-center gap-4">
-            <img src="assets/profile.png" alt="${p.name}" class="w-16 h-16 md:w-20 md:h-20 rounded-full border-2 border-cyan-400 shadow-lg shadow-indigo-500/20 object-cover flex-shrink-0" onerror="this.style.display='none'">
-            <div>
-              <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-indigo-500/10 text-indigo-400 border border-indigo-500/20 mb-2">
-                <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span> Available for AI Engineering & Internships
-              </div>
-              <h1 class="text-3xl md:text-4xl font-extrabold text-white tracking-tight">${p.name}</h1>
-              <p class="text-base font-medium text-cyan-400 mt-0.5">${p.roles.join(" · ")}</p>
+        <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+          <div>
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-indigo-500/10 text-indigo-400 border border-indigo-500/20 mb-3">
+              <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span> Available for AI Engineering & Internships
             </div>
+            <h1 class="text-3xl md:text-4xl font-extrabold text-white tracking-tight">${p.name}</h1>
+            <p class="text-base font-medium text-cyan-400 mt-1">${p.roles.join(" · ")}</p>
           </div>
           <div class="flex gap-2.5">
             <button class="btn-download-resume btn-primary">
