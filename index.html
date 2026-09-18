@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Madhav Raj M — AI Vibe Coder & Systems Developer | Executive Portfolio</title>
+
+  <!-- Google Fonts & FontAwesome -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Orbitron:wght@600;800;900&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Application Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Ambient 3D Constellation Background -->
+  <div id="canvas-bg"></div>
+
+  <!-- Application Wrapper -->
+  <div class="app-container">
+    <!-- Top Executive Navbar -->
+    <header class="navbar">
+      <div class="nav-brand">
+        <div class="brand-avatar">MR</div>
+        <div>
+          <div class="brand-name">Madhav Raj M</div>
+          <div class="brand-title">AI Vibe Coder · Web Developer · Video Editor</div>
+        </div>
+      </div>
+
+      <!-- Navigation Tabs -->
+      <nav class="nav-tabs">
+        <button class="nav-tab-btn active" data-tab="overview">
+          <i class="fas fa-id-card"></i> Overview
+        </button>
+        <button class="nav-tab-btn" data-tab="experience">
+          <i class="fas fa-briefcase"></i> Experience
+        </button>
+        <button class="nav-tab-btn" data-tab="projects">
+          <i class="fas fa-layer-group"></i> Projects
+        </button>
+        <button class="nav-tab-btn" data-tab="skills">
+          <i class="fas fa-code"></i> Skills & Languages
+        </button>
+        <button class="nav-tab-btn" data-tab="education">
+          <i class="fas fa-graduation-cap"></i> Education & Certs
+        </button>
+        <button class="nav-tab-btn" data-tab="contact">
+          <i class="fas fa-envelope"></i> Contact
+        </button>
+      </nav>
+
+      <!-- Action Buttons -->
+      <div class="nav-actions">
+        <button class="btn-download-resume btn-primary" title="Download ATS Resume as PDF">
+          <i class="fas fa-file-arrow-down mr-1.5"></i> Download Resume (PDF)
+        </button>
+      </div>
+    </header>
+
+    <!-- Two-Column Executive Workspace -->
+    <div class="main-workspace">
+      <!-- Left Sidebar: Hosts 3D Interactive ID Card -->
+      <aside class="sidebar-idcard-pane">
+        <div class="idcard-viewport-wrap">
+          <div id="idcard-viewport"></div>
+        </div>
+
+        <div class="idcard-controls">
+          <button id="idcard-flip-btn" class="btn-outline w-full justify-center">
+            <i class="fas fa-rotate-left mr-1.5"></i> TURN CARD (BACK)
+          </button>
+          <div class="idcard-hint">
+            <i class="fas fa-mouse mr-1"></i> Interactive 3D Badge • Click, drag or tilt with mouse
+          </div>
+        </div>
+
+        <!-- Sidebar Quick Communication & Info -->
+        <div class="sidebar-quick-actions">
+          <a href="mailto:madhav.madathil@gmail.com" class="sidebar-info-row">
+            <i class="fas fa-envelope"></i>
+            <span class="truncate">madhav.madathil@gmail.com</span>
+          </a>
+          <a href="tel:+919360989726" class="sidebar-info-row">
+            <i class="fas fa-phone"></i>
+            <span>+91 9360989726</span>
+          </a>
+          <div class="sidebar-info-row">
+            <i class="fas fa-location-dot"></i>
+            <span>Chennai, Tamil Nadu, India</span>
+          </div>
+          <div class="sidebar-info-row">
+            <i class="fas fa-university"></i>
+            <span class="truncate">Sri Ramachandra University (SRIHER)</span>
+          </div>
+          <a href="https://github.com/Madhav-does" target="_blank" rel="noopener noreferrer" class="sidebar-info-row">
+            <i class="fab fa-github"></i>
+            <span>github.com/Madhav-does</span>
+          </a>
+          <a href="https://www.linkedin.com/in/madhav-raj-633409375" target="_blank" rel="noopener noreferrer" class="sidebar-info-row">
+            <i class="fab fa-linkedin"></i>
+            <span>LinkedIn Profile</span>
+          </a>
+        </div>
+      </aside>
+
+      <!-- Right Main Content Scroll Pane -->
+      <main id="main-scroll-pane" class="content-scroll-pane">
+        <!-- 1. Overview Tab -->
+        <section id="tab-overview" class="tab-content-panel active">
+          <div id="overview-container"></div>
+        </section>
+
+        <!-- 2. Experience Tab -->
+        <section id="tab-experience" class="tab-content-panel">
+          <div class="flex justify-between items-center mb-6">
+            <div>
+              <h2 class="text-2xl font-bold text-white tracking-tight">Work Experience & Academic Roles</h2>
+              <p class="text-sm text-slate-400 mt-0.5">Chronological record of university scholarship, AI engineering, and leadership.</p>
+            </div>
+          </div>
+          <div id="experience-container"></div>
+        </section>
+
+        <!-- 3. Projects Tab -->
+        <section id="tab-projects" class="tab-content-panel">
+          <div class="flex justify-between items-center mb-6">
+            <div>
+              <h2 class="text-2xl font-bold text-white tracking-tight">Featured Engineering Projects</h2>
+              <p class="text-sm text-slate-400 mt-0.5">Autonomous AI agents, intelligent voice assistants, and full-stack platforms.</p>
+            </div>
+          </div>
+          <div id="projects-container"></div>
+        </section>
+
+        <!-- 4. Skills & Languages Tab -->
+        <section id="tab-skills" class="tab-content-panel">
+          <div class="flex justify-between items-center mb-6">
+            <div>
+              <h2 class="text-2xl font-bold text-white tracking-tight">Technical Skills & Multilingual Studies</h2>
+              <p class="text-sm text-slate-400 mt-0.5">Multi-disciplinary technical proficiencies and foreign language competencies.</p>
+            </div>
+          </div>
+          <div id="skills-container"></div>
+        </section>
+
+        <!-- 5. Education & Certifications Tab -->
+        <section id="tab-education" class="tab-content-panel">
+          <div class="flex justify-between items-center mb-6">
+            <div>
+              <h2 class="text-2xl font-bold text-white tracking-tight">Education & Verified Certifications</h2>
+              <p class="text-sm text-slate-400 mt-0.5">Sri Ramachandra University, The Schram Academy, HP LIFE, and LinkedIn accreditations.</p>
+            </div>
+          </div>
+          <div id="education-container"></div>
+        </section>
+
+        <!-- 6. Contact Tab -->
+        <section id="tab-contact" class="tab-content-panel">
+          <div class="glass-card p-6 md:p-8">
+            <div class="max-w-2xl">
+              <span class="text-xs font-semibold text-indigo-400 uppercase tracking-wider">Get in Touch</span>
+              <h2 class="text-2xl font-bold text-white mt-1">Initiate Contact with Madhav Raj M</h2>
+              <p class="text-sm text-slate-300 mt-2 leading-relaxed">
+                I am actively seeking opportunities in autonomous AI agent development, AI vibe coding, web development, and software engineering internships.
+              </p>
+
+              <form id="contact-dispatch-form" class="mt-6 space-y-4">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div>
+                    <label class="block text-xs font-medium text-slate-400 mb-1.5">Your Name</label>
+                    <input type="text" id="cf-name" placeholder="e.g. Alex Johnson" required class="form-input">
+                  </div>
+                  <div>
+                    <label class="block text-xs font-medium text-slate-400 mb-1.5">Your Email</label>
+                    <input type="email" id="cf-email" placeholder="alex@company.com" required class="form-input">
+                  </div>
+                </div>
+                <div>
+                  <label class="block text-xs font-medium text-slate-400 mb-1.5">Subject</label>
+                  <input type="text" id="cf-subject" placeholder="Project collaboration / Internship inquiry" required class="form-input">
+                </div>
+                <div>
+                  <label class="block text-xs font-medium text-slate-400 mb-1.5">Message</label>
+                  <textarea id="cf-message" rows="4" placeholder="Hello Madhav, I came across your portfolio..." required class="form-input resize-none"></textarea>
+                </div>
+                <button type="submit" class="btn-primary">
+                  <i class="fas fa-paper-plane mr-2"></i> Send Message via Email
+                </button>
+              </form>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+  </div>
+
+  <!-- =========================================================
+       ATS DOCUMENT PREVIEW & PDF PRINT MODAL
+  ========================================================= -->
+  <div id="ats-preview-modal">
+    <div class="ats-modal-container">
+      <div class="ats-modal-header no-print">
+        <div class="flex items-center gap-2">
+          <span class="text-xs font-bold text-indigo-400 uppercase tracking-wider">Document Preview</span>
+          <h3 class="text-base font-bold text-white">Madhav Raj M — Official Resume</h3>
+        </div>
+        <div class="flex items-center gap-2.5">
+          <button onclick="window.print()" class="btn-primary">
+            <i class="fas fa-print mr-1.5"></i> Print / Save as PDF
+          </button>
+          <button id="ats-modal-close" class="btn-outline">
+            <i class="fas fa-xmark"></i>
+          </button>
+        </div>
+      </div>
+      <div id="ats-doc-content" class="ats-modal-scroll">
+        <!-- Injected dynamically via app.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Libraries -->
+  <!-- 1. Three.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <!-- 2. GSAP for Smooth 3D Card Animations -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
+  <!-- Application Logic -->
+  <script src="js/data.js"></script>
+  <script src="js/idcard.js"></script>
+  <script src="js/scene.js"></script>
+  <script src="js/app.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,12 @@
+# Scratch & test scripts
+scratch/
+.tempmediaStorage/
+
+# OS metadata
+.DS_Store
+Thumbs.db
+*.tmp
+*.log
+
+# Node
+node_modules/
